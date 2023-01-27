@@ -5,6 +5,7 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+
 nav {
     height: 80px;
     background: #383a4b;
@@ -35,7 +36,7 @@ nav a {
 }
 
 .hero {
-    background: #0c0c0c;
+    background: #1c1d25;
 }
 
 .hero-container {
@@ -143,16 +144,17 @@ nav a {
 .about {
     width:100%;
     padding: 100px 0px;
-    background-color: #0c0c0c ;
+    background-color: #1c1d25 ;
 }
 
 .about img {
     height: auto;
-    width: 450px;
+    width: 500px;
 }
 
 .about-text {
     width: 550px;
+    
 }
 
 .about-container {
@@ -162,6 +164,7 @@ nav a {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .about-text h2 {
@@ -191,9 +194,107 @@ span{
     color: #860102;
 }
 
+section {
+    display: block;
+}
+
+.skills {
+    width:100%;
+    padding: 100px 0px;
+    background-color: #1c1d25 ;
+}
+
+.section-title {
+    position: relative;
+    margin-bottom: 1rem;
+    font-size: 5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.skills-container {
+    width: 1130px;
+    max-width: 95%;
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+
+.skills-group {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.skills-try {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.group-element {
+    width: 100%;
+    position: relative;
+    display: flex;
+    min-height: 1px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    border-color: #9e9ea0;
+    border-style:double;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.skills-tittle {
+    flex: auto;
+    display: flex;
+    margin-bottom: 1rem;
+}
 
 
+.tittle-logo img {
+    height : 60px;
+    width: auto;
+}
 
+.skills-image {
+    display: flex;
+    align-items: center;
+}
+
+.skills-image img {
+    height: 60px;
+    width: auto;
+}
+
+.skills-tittle h4 {
+    font-size: 30px;
+    margin-left: 15px;
+    margin-top: 15px;
+    color: #9e9ea0;
+}
+
+.skills-text {
+    flex: auto;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.skills-text p {
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    display: flex;
+}
 
 
 
