@@ -29,6 +29,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0rem calc((100vw- 1300px)/2);
+    z-index: 4;
 }
 
 .logo img {
@@ -201,90 +202,114 @@ nav a {
     width:100%;
     padding: 100px 0px;
     background-color: #1c1d25 ;
-}
-
-.about img {
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 0rem 2rem;
-}
-
-.about-text {
-    width: 550px;
-    max-width: 100%;
     display: flex;
     flex-direction: column;
-    
-}
-
-.about-container {
-    width: 1130px;
-    max-width: 95%;
-    margin: auto auto;
+    justify-content: center;
     align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 95vh;
-    flex-wrap: wrap-reverse;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    box-sizing: border-box;
-    justify-content:center;
-}   
-
-.about-text h2 {
-    color: #fdcc04;
-    font-size: 75px;
-    text-transform: capitalize;
-    margin-bottom: 20px;
-    word-wrap: break-word;
-    max-width: 100%;
 }
 
-.about-text h5{
-    color: #ff7d0f;
-    letter-spacing: 2px;
-    font-size: 22px;
-    margin-bottom: 25px;
-    text-transform: capitalize;
-    word-wrap: break-word;
-    max-width: 100%;
-}
-
-.about-text p{
-    color: #fff;
-    letter-spacing: 1px;
-    line-height: 28px;
-    font-size: 18px;
-    font-size-adjust: inherit;
-    margin-bottom: 45px;
-    word-wrap: break-word;
-    max-width: 100%;
+.about-wrapper {
     display: flex;
+    width: 70%;
+    justify-content: space-around;
 }
 
-.button {
-    display: inline-block;
-    background-color: #ff7b0f00;
-    border: 1px solid #ff7b0f;
-    color: #ff7b0f;
-    padding: 0.75rem 2rem;
-    font-weight: 600;
-    border-radius: 0.5rem;
-    max-width: 200px;
-  }
-  .button:hover {
-    background-color: #ff7b0f;
-    color: #fff;
-    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
-  }
 
-span{
-    color: #860102;
+.about-container{
+	max-width: 450px;
+	height: 600px;
+	padding: 2rem 1rem;
+	position: relative;
+	display: flex;
+	align-items:flex-end;
+	box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+	transition: 0.5s ease-in-out;
+
 }
+
+.about-container:hover{
+    transform: translateY(20px);
+
+}
+
+.about-container:before{
+	content:'';
+	position: absolute;
+	top:0;
+	left:0;
+	display:block;
+	width:100%;
+	height:100%;
+	background: linear-gradient(to bottom, rgba(0,176,155,0.5), rgba(150,201,61,1));
+	z-index:2;
+	transition: 0.5s all;
+	opacity: 0;
+
+}
+
+.about-container:hover:before{
+	opacity:1;
+}
+
+.about-container img{
+	width:100%;
+	height:100%;
+	object-fit: cover;
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+.about-container .about-text {
+	position: relative;
+	z-index:3;
+	color: #fff;
+	opacity:0;
+	transform: translateY(30px);
+	transition: 0.5s all;
+}
+
+.about-container:hover .about-text {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+
+
+.about-container .about-text h2{
+	margin: 0;
+}
+
+.about-container .about-text h5{
+	margin: 0;
+    font-size: 30px;
+}
+
+.about-container .about-text p {
+	letter-spacing: 1px;
+	font-size: 15px;
+	margin-top: 8px;
+	margin-bottom: 20px;
+}
+
+
+
+.about-container .about-text .button {
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	background: #fff;
+	color: #000;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.4s ease-in-out;
+	
+}
+
+.about-container .about-text .button:hover {
+	box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+}
+
 
 section {
     display: block;
