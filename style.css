@@ -73,7 +73,6 @@ nav a {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    
     padding: 0 2rem;
     transition: all 0.5s ease-in-out;
 }
@@ -86,18 +85,6 @@ nav a {
 .hero-container.visible {
     opacity: 1;
     transform: scale(1);
-}
-
-.myName {
-    animation: fade-in 5s ease-in-out;
-    filter: blur(10px);
-    padding: 0 5px;
-    transition: 1s;
-}
-
-.myName:hover {
-    filter: blur(0px);
-    transition: 2s;
 }
 
 @keyframes fade-in {
@@ -123,6 +110,19 @@ nav a {
     font-size: 1.5rem;
     line-height: 1.5;
     color: #fdcc04;
+    cursor: pointer;
+}
+
+.hero-info {
+    animation: fade-in 5s ease-in-out;
+    filter: blur(10px);
+    padding: 0 5px;
+    transition: 1s;
+}
+
+.hero-info:hover {
+    filter: blur(0px);
+    transition: 1s;
 }
 
 
@@ -510,6 +510,18 @@ form label {
 	letter-spacing: 3px;
 }
 input[type=text], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ff7d0f;
+    background-color: #535354;
+    color: #fff;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+}
+input[type=email], select, textarea {
 	width: 100%;
 	padding: 12px;
 	border: 1px solid #ff7d0f;
